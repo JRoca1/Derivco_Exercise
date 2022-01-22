@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HighCard_Game.Classes;
+using System.Diagnostics;
 
 namespace HighCard_Game_Console
 {
@@ -13,7 +14,7 @@ namespace HighCard_Game_Console
         {
             try
             {
-                //HighCard highCard = new HighCard(20, 5, PlayMethods.TieNewCard);
+                //HighCard highCard = new HighCard(20, 8, PlayMethods.TieNewCard);
                 HighCard highCard = new HighCard(PlayMethods.TieNewCard);
 
                 Console.WriteLine("Press some key to play!");
@@ -31,6 +32,7 @@ namespace HighCard_Game_Console
             }
             catch (Exception ex)
             {
+                Trace.Write(ex.ToString());
                 Console.WriteLine(ex.ToString());
                 Console.ReadKey();
             }
